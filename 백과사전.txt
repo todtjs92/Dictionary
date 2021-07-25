@@ -1,0 +1,32 @@
+1. conda 명령어 안 먹힐때
+https://brilliant-th.tistory.com/24
+
+2. source activate
+https://willbesoon.tistory.com/119
+
+3. 리대쉬 setup
+https://redash.io/help/open-source/setup
+
+4. Airflow helm chart
+https://github.com/airflow-helm/charts/tree/airflow-7.14.0/charts/airflow
+
+5. 깃허브 depreciation 해결
+https://velog.io/@cookncoding/GitHub-암호-토큰-방식GitHub-Deprecation-Notice-메일-해결
+
+6. ls Operation not permitted
+https://saurus2.tistory.com/entry/ls-Operation-not-permitted-mac-OS-맥북-터미널-에러
+
+7. 구자환 교수님
+https://trello.com/b/VjgDkljT/big-data-koo-lecture-notes
+
+8. 유용한 데이터엔지니어 블로그
+https://www.startdataengineering.com/post/10-key-skills-data-engineer/
+
+9. Docker permission 오류
+https://seulcode.tistory.com/557
+
+10. Install Airflow with Docker-compose
+https://jybaek.tistory.com/922 
+
+11. Coursera 버트 배울수있는 곳
+https://www.coursera.org/specializations/practical-data-science
