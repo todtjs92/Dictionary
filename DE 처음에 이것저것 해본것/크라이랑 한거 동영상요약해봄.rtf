@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg949\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Monaco;\f4\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red32\green32\blue32;\red153\green168\blue186;
+\red152\green54\blue29;\red191\green100\blue38;\red88\green118\blue71;\red22\green21\blue22;\red22\green21\blue22;
+\red246\green246\blue246;\red18\green79\blue146;\red58\green156\blue3;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c42745\c42745\c42745;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c60000\c65882\c72941;
+\csgenericrgb\c59608\c21176\c11373;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c34510\c46275\c27843;\cssrgb\c11373\c10980\c11373;\cssrgb\c11373\c10980\c11373\c3922;
+\cssrgb\c97255\c97255\c97255;\cssrgb\c7059\c39216\c63922;\cssrgb\c27451\c65882\c0;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10000\viewh12740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1
+\f1 \'b9\'f8
+\f0 \
+0
+\f1 ~ 10 - \'b9\'e8\'c6\'f7\'c7\'cf\'b4\'c2\'b9\'fd + \'c6\'e4\'ba\'cf \'c5\'e4\'c5\'ab\'b9\'d9\'b2\'d9\'b1\'e2, \'c1\'d7\'c0\'cc\'c1\'f6 \'be\'ca\'b0\'ed \'b5\'b9\'b8\'b1\'b6\'f3\'b8\'e9 \'bb\'f5\'b7\'ce \'c2\'a5\'be\'df\'b5\'ca, \'ba\'b8\'be\'c8\'bb\'f3\'c0\'cc\'c0\'af\'b7\'ce \'b1\'d7\'b7\'b8\'b0\'d4\'c7\'d1\'b4\'d9\'b4\'c2\'b5\'a5?\
+11\'ba\'d0 ~ 24 .  : Trouble Shooting + \'c0\'da\'c1\'d6\'ba\'c1\'be\'df\'c7\'d2 \'b1\'ea\'c7\'e9\'b7\'b9\'c6\'f7\
+25~ 29\'ba\'d050\'c3\'ca: \'bf\'a1\'be\'ee\'c7\'c3\'b7\'ce\'bf\'ec \'c4\'da\'b5\'e5 \'bc\'b3\'b8\'ed  - airflow\'bf\'a1\'bc\'ad  elts- datamart - creation-dag.py\
+\'bb\'f5\'b7\'ce\'bf\'ee \'c0\'e2\'c0\'bb \'c3\'df\'b0\'a1\'c7\'cf\'b0\'ed\'bd\'cd\'c0\'b8\'b8\'e9 \'c5\'d7\'bd\'ba\'c5\'a9\'b8\'a6 \'c7\'cf\'b3\'aa\'b8\'b8\'b5\'e9\'be\'ee\'c1\'e0\'be\'df\'c7\'d4  \'c0\'cc\'b0\'c9 \'c5\'d7\'bd\'ba\'c5\'a9\'b6\'f3\'b0\'ed \'c7\'cf\'b4\'c2\'b5\'ed \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs26 \cf2 \cb3 # premart.klass_orders\
+\cf4 create_klass_orders = EMRSSHOperator(\
+    \cf5 dag\cf4 =data_mart_creation_dag\cf6 ,\
+    \cf5 task_id\cf4 =\cf7 "create_klass_orders"\cf6 ,\
+    \cf5 spark_program_args\cf4 =shell_command_args(\
+        \cf7 "create_klass_orders"\cf6 ,\
+        \cf5 dest_db_prefix\cf4 =\cf7 "premart"\cf6 ,\
+        \cf5 dest_table_name\cf4 =\cf7 "klass_orders"\cf6 ,\
+        \cf5 execution_datetime_tag\cf4 =\cf7 "\{\{execution_date\}\}"\cf6 ,\
+    \cf4 )\cf6 ,\
+\cf4 )\
+\
+
+\f1 \'bb\'f3\'b0\'fc\'b0\'fc\'b0\'e8\'bc\'b3\'c1\'a4\'c0\'cc
+\f2  \
+MONGO_DB_TABLES_TO_SYNC_MAP[\cf7 "klass_item_orders"\cf4 ] >> create_klass_orders\
+MONGO_DB_TABLES_TO_SYNC_MAP[\cf7 "klass_item_orders__price_vector_history"\cf4 ] >> create_klass_orders\
+MONGO_DB_TABLES_TO_SYNC_MAP[\cf7 "klass_stores"\cf4 ] >> create_klass_orders\
+\
+
+\f1 \'c0\'cc\'ba\'ce\'ba\'d0\'c0\'cc\'be\'fa\'b4\'f8\'b0\'c5\'c0\'d3\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 \'b4\'eb\'b1\'d7\'b8\'a6 \'c7\'cf\'b3\'aa \'c3\'df\'b0\'a1\'c7\'cf\'b0\'ed\'bd\'cd\'c0\'b8\'b8\'e9 \
+\'bf\'b7\'bf\'a1 .py \'c7\'cf\'b3\'aa \'b4\'f5\'b8\'b8\'b5\'e9\'be\'ee\'c1\'d6\'b8\'e9\'b5\'ca \
+staging-secrets.yaml\'bf\'a1 \'ba\'b8\'be\'c8\'b0\'fc\'b7\'c3\'c1\'a4\'ba\'b8\'b0\'a1 \'bc\'bc\'c6\'c3\'b5\'c7\'be\'ee\'c0\'d6\'c0\'bd \'bf\'a9\'b1\'e2\'bf\'a1\'b5\'b5\
+google client-id ,google-client-secret \'b0\'b0\'c0\'ba\'b0\'d4\'c0\'d6\'c0\'bd \'c0\'cc\'b0\'c5 \'b9\'d9\'b2\'e3\'c1\'e0\'be\'df\'c7\'d2\'b5\'ed \'b3\'aa\'c1\'df\'bf\'a1\
+id_rsa \'c0\'cc\'b7\'b1\'b0\'c5\'b5\'b5 \'b8\'b6\'c2\'f9\'b0\'a1\'c1\'f6\'c0\'d3\
+eks-terraform\'c0\'ba \'c1\'f8\'c2\'a5 \'b0\'c7\'b5\'e5\'b8\'b1 \'c0\'cf \'be\'f8\'c0\'bb\'b0\'c5\'c0\'d3 \
+29\'ba\'d050~ : airflow \'bd\'cf\'b4\'d9 \'c5\'ac\'b8\'ae\'be\'ee\'c7\'cf\'b4\'c2 \'b9\'fd -> pat , failed \'b4\'a9\'b8\'a3\'b0\'ed clear \'b4\'ad\'b7\'af\'c1\'d6\'b8\'e9\'b5\'ca \'b1\'d9\'b5\'a5 past \'bd\'c7\'c6\'d0\'c7\'d1\'b0\'c5 \'b0\'b3\'b8\'b9\'be\'c6\'bc\'ad \'c0\'fc\'ba\'ce\'c7\'cf\'b8\'e9 \'bf\'c0\'b7\'f9\'b6\'e3\'b0\'c9 \'b1\'d7\'b3\'c9 \'c7\'cf\'b3\'aa\'c7\'cf\'b3\'aa \'c7\'d8\'be\'df\'c7\'d2\'b5\'ed..\
+32\'ba\'d0 10\'c3\'ca- \'c0\'af\'c0\'fa \'b5\'a5\'b8\'f0\'b1\'d7\'b7\'a1\'c7\'c8 \'c3\'df\'b0\'a1 , \'bc\'ba\'ba\'b0 ,\'bb\'fd\'b3\'e2\'bf\'f9\'c0\'cf \'c3\'df\'b0\'a1\'c7\'cf\'b1\'e2  raw_production.users \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1 \
+\'b1\'d7\'b3\'c9 \'c4\'c3\'b7\'b3 json \'c7\'fc\'bd\'c4\'c0\'b8\'b7\'ce \'b3\'d6\'c1\'d6\'b0\'ed \'b1\'ea\'c0\'b8\'b7\'ce \'b3\'d6\'be\'ee\'c1\'d6\'b1\'e2\
+git checkout -b feat/mongo_users_demographic\
+\uc0\u8212 \u8212  \'c0\'cc\'b0\'c7 \'b4\'d9\'b8\'a5\'bb\'e7\'b6\'f7\'c0\'cc \'c0\'db\'be\'f7\'c7\'cf\'b4\'c2\'b0\'c5 \'b9\'ab\'bd\'c3\'c7\'cf\'bc\'c0 \'b9\'d8\'c1\'d9 \u8212 \u8212 \
+git fetch\
+git pull \'b5\'d1\'b4\'d9 \'c4\'a1\'b8\'e9 \'c0\'a7\'bf\'a1 \'b8\'ed\'b7\'c9\'c0\'cc \'ba\'b8\'c0\'cf\'b0\'c5\'be\'df\
+git checkout feat/mongo_users_demographic \'bf\'e4\'b7\'b8\'b0\'d4 \'c3\'c4\'c1\'d6\'b8\'e9 \'b5\'ca. \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212  \
+mongo queries \'b6\'f3\'b4\'c2 \'c6\'c4\'c0\'cf\'c0\'cc\'c0\'d6\'be\'ee \'b0\'c5\'b1\'e2\'bf\'a1 \'bf\'ec\'b8\'ae\'b0\'a1 etl \'c7\'d8\'bf\'c0\'b4\'f8 \'b8\'f9\'b0\'ed \'c4\'f5\'b8\'ae\'b0\'a1 \'bd\'cf\'b4\'d9\'c0\'d6\'c0\'bd \
+emr\'c0\'cc \'bb\'f5\'b7\'ce \'b9\'e8\'c6\'f7\'b5\'c7\'b8\'e9 awsemr dp. ofh Em\'bf\'a1 \'bb\'f5\'b7\'ce \'b6\'e1\'b0\'d4 \'c0\'d6\'c0\'bb\'b0\'c5 \'be\'df - \
+select\
+\'b8\'f9\'b0\'ed\'c4\'f5\'b8\'ae\'bf\'a1\'bc\'ad \'bf\'f8\'c7\'cf\'b4\'c2 \'b4\'eb\'b7\'ce \'bc\'f6\'c1\'a4\'c0\'bb \'c7\'d8\'c1\'d6\'be\'fa\'c0\'b8\'b8\'e9 \'c0\'cc\'c1\'a6 \'b5\'b5\'c4\'bf\'b7\'ce \'c0\'cc\'b9\'cc\'c1\'f6\'b8\'a3 \'b8\'b8\'b5\'e9\'be\'ee\'be\'df\'c7\'d4 \
+\'b8\'ed\'b7\'c9\'be\'ee\
+vi ~/.bashrc\
+source  ~/.bashrc\
+export IMAGE_TAG = mongo_users_demographic # \'c0\'db\'be\'f7\'c7\'d1 \'b0\'cd\'bf\'a1 \'b4\'eb\'c7\'cf\'bf\'a9 \'c0\'cc\'b9\'cc\'c1\'f6\'bf\'a1 \'c5\'c2\'b1\'d7\'b4\'de\'b1\'e2\
+docker build . -t $ECR_REGISRY/$ECR_REPOSITORY. # \'c8\'ad\'b8\'e7\'bf\'a1 \'c2\'a9\'b7\'c3\'b4\'c8\'b5\'a5 \'c0\'da\'b5\'bf\'bf\'cf\'bc\'ba\'b5\'c7\'be\'fa\'c0\'bd \
+-t\'b4\'c2 \'c5\'c2\'b1\'d7\'b8\'a6 \'ba\'d9\'bf\'a9\'c1\'d6\'b0\'da\'b5\'fb\'b6\'f5\'a4\'a4 \'b6\'e6\
+docker push \'b8\'b8\'c3\'c4\'b5\'b5 \'c0\'da\'b5\'bf\'bf\'cf\'bc\'ba\'c0\'cc \'b6\'e4 \
+\'c0\'cc\'b0\'c5 ecr\'bf\'a1\'bc\'ad \'c8\'ae\'c0\'ce\'c7\'d2\'bc\'f6 \'c0\'d6\'c0\'bd \'c0\'cc\'b9\'cc\'c1\'f6\'b0\'a1 2\'c1\'d6\'b0\'a1 \'c1\'f6\'b3\'aa\'b8\'e9 \'b8\'b8\'b7\'e1\'b0\'a1\'b5\'ca . latest\'b4\'c2 \'bd\'ba\'c5\'d7\'c0\'cc\'ba\'ed\'c7\'d1 \'c0\'cc\'b9\'cc\'c1\'f6\'b8\'a6 \'bf\'c3\'b8\'ae\'b4\'c2\'b0\'c7\'b5\'a5 \'c0\'cc\'b0\'c5\'b5\'b5 \'b4\'a9\'b1\'ba\'b0\'a1\'b0\'a1 \'b0\'d4\'bc\'d3 \'c7\'aa\'bd\'c3\'b8\'a6 \'c7\'d8\'c1\'e0\'be\'df\'b5\'c8\'b4\'d9? \'b2\'a8\'c1\'fa\'bc\'f6\'b0\'a1\'c0\'d6\'be\'ee\'bc\'ad?\
+\
+50\'ba\'d0\'bf\'a1 \'c0\'cc\'b0\'c5 \'c1\'fa\'b9\'ae \'bf\'a9\'b1\'e2\'ba\'ce\'c5\'cd \'b8\'d5\'bc\'d2\'b8\'b0\'c1\'f6 \'c0\'df\'b8\'f0\'b8\'a3\'b0\'da\'c0\'bd..\
+\
+\'b4\'d9 \'89\'e7\'c0\'b8\'b8\'e9 \'c0\'cc\'c1\'a6 \'c0\'ce\'c5\'da\'b8\'ae\'c1\'a6\'c0\'cc\'bf\'a1\'bc\'ad \'c0\'cc\'b9\'cc\'c1\'f6\'c5\'c2\'b1\'d7\'b8\'a6 \'c1\'f6\'c1\'a4\'c7\'d8\'bc\'ad \'b5\'b9\'b7\'c1\'c1\'d6\'b4\'c2 \'b0\'cd\'c0\'cc \'c7\'ca\'bf\'e4\'c7\'d1\'b5\'a5\
+\'b1\'e2\'c1\'b8\'bf\'a1\'b4\'c2 latest\'b8\'a6 \'b9\'d9\'b6\'f3\'ba\'b8\'b0\'d4 \'c7\'df\'b4\'c2\'b5\'a5 ( production\'bf\'a1\'bc\'ad latest\'b8\'b8 \'b5\'b9\'b0\'d4 \'b5\'c7\'c0\'d6\'b4\'c2\'b5\'a5\
+\'b9\'e6\'b1\'dd \'b8\'f9\'b0\'ed\'c4\'f5\'b8\'ae\'b8\'a6 \'bf\'c3\'b7\'c8\'c0\'b8\'b4\'cf\'b1\'ee \'c0\'cc\'b0\'c9 \'b5\'b9\'b8\'ae\'b7\'c1\'b8\'e9 \'bb\'f5\'b7\'ce\'b8\'b8\'b5\'e7\'b0\'c9  \'be\'ee\'b5\'f0\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'b5\'b9\'b7\'c1\'c1\'e0\'be\'df\'c7\'d4\
+\'c0\'cc\'b0\'c5\'b5\'b5 \'c5\'d7\'bd\'ba\'c6\'ae\'c7\'cf\'b4\'c2\'b0\'c5\'b4\'cf\'b1\'ee \'ba\'b0\'b5\'b5 \'ba\'ea\'b7\'a3\'c4\'a1\'b8\'a6 \'c6\'c4\'c1\'e0\'be\'df\'c7\'d4\
+pull reques\
+\'b7\'b9\'b5\'e5\'bd\'ac\'c7\'c1\'c6\'ae\'b4\'c2 \'c4\'f5\'b8\'ae\'bf\'a3\'c1\'f8\'c0\'cc\'be\'df s3\'bf\'a1\'c0\'d6\'b4\'c2 \'c6\'c4\'c4\'f9\'c6\'c4\'c0\'cf\'c0\'bb \'c4\'f5\'b8\'ae\'c7\'d8\'bc\'ad \'b0\'a1\'c1\'ae\'bf\'c0\'b4\'c2\'b0\'c5\'c0\'d3\
+\'b1\'db\'b7\'e7\'bf\'a1 \'bd\'ba\'c5\'b0\'b8\'b6\'b0\'a1 \'c0\'fa\'c0\'e5\'b5\'c7\'c0\'d6\'c0\'bd\
+\'bf\'a1\'be\'ee\'c7\'c3\'b7\'ce\'bf\'ec\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'b6\'c8\'b9\'d9\'b7\'ce\'c2\'ad\'b4\'c2\'b5\'a5 \'be\'c8\'b5\'c7\'b4\'c2\'b0\'e6\'bf\'ec\'b0\'a1 \'c0\'d6\'b4\'d9\'b3\'d7?\
+\
+1\'ba\'d0 \'c1\'a4\'b5\'ce\'b3\'b2\'b1\'e2\'b0\'ed emr \'c1\'f7\'c1\'a2 \'c1\'a2\'b1\'d9\'c7\'cf\'b1\'e2 \'be\'d6\'b4\'c2 \'bf\'d6\'c4\'c9 \'bd\'b1\'b0\'d4 \'c1\'a2\'b1\'d9\'c7\'cf\'c1\'f6 \'c0\'cc\'b0\'c5\'b5\'b5 \'c1\'fa\'b9\'ae \
+ \
+\
+\'b5\'ce\'b9\'f8\'c2\'b0\'bf\'b5\'bb\'f3 \'c0\'ba \'b0\'c5\'c0\'c7 \'bd\'ba\'c6\'c4\'c5\'a9 \'bf\'f8\'b8\'ae \'bc\'b3\'b8\'ed\'bf\'b5\'bb\'f3\'c0\'d3\
+\
+\'be\'c6\'c0\'cc\'c6\'d0\'b5\'e5\
+-16\'ba\'d0\'c2\'a5\'b8\'ae \'bf\'b5\'bb\'f3\
+main.yml\'bf\'a1 \'b8\'b6\'bd\'ba\'c5\'cd\'c0\'cf\'8b\'9a\'b6\'fb \'be\'c6\'b4\'d2\'8b\'9a\'b6\'fb \'b1\'b8\'ba\'d0\'b5\'c7\'be\'ee\'b0\'a1\'bc\'ad \'bf\'c3\'b6\'f3\'b0\'a3\'b4\'d9\
+\
+-\'b5\'da\'bf\'a1\'b4\'c2 \'b5\'b5\'c4\'bf\'b7\'ce\'bf\'c3\'b8\'ae\'b4\'c2\'b0\'c5 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\'bf\'e4\'b0\'c5 \'c8\'af\'b0\'e6\'ba\'af\'bc\'f6\'b7\'ce \'b3\'d6\'c1\'d6\'b1\'e2\
+ vi ~/.bashrc
+\f3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf8 \cb10 export ECR_REGISTRY={\field{\*\fldinst{HYPERLINK "http://212011163676.dkr.ecr.ap-northeast-2.amazonaws.com/"}}{\fldrslt \cf11 212011163676.dkr.ecr.ap-northeast-2.amazonaws.com}}\cb1 \
+\cb10 export ECR_REPOSITORY=pyspark-etl
+\f3\fs24 \cb9 \
+- source ~/.bashrc\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf8 \'b0\'aa
+\f3  
+\f1 \'b5\'e9\'be\'ee\'b0\'ac\'b3\'aa
+\f3  
+\f1 \'c8\'ae\'c0\'ce
+\f3  $ECR_REGISRY\
+
+\f1 \'c7\'cf\'c1\'f6\'b8\'b8
+\f3  \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs28 \cf12 \cb13 EAANijzntZADcBAFRJeOXZAg3QHGU98RFR4hSu0X05HyfkbDOeUOzrFrNXmVH2e54K3MfLxyPU8htw9xH8rfjDbM75FrvZCLhQ8miZBONDXaCOp4ERoXJZCCbD1UMj7QKjD16aVvF93BJpt7iKZC2ODZCoJt7Oif4ja7x9KT0kUJWF1UAndcAFCsZBgROnzhxJNWSmr3mlBUI0wZDZD
+\f3\fs24 \cf8 \cb9 \
+}
