@@ -28,5 +28,15 @@ https://seulcode.tistory.com/557
 10. Install Airflow with Docker-compose
 https://jybaek.tistory.com/922 
 
+
 11. Coursera 버트 배울수있는 곳
 https://www.coursera.org/specializations/practical-data-science
+
+12. yaml 에 대해 정리
+https://learnxinyminutes.com/docs/yaml/
+
+13. 데이터엔지니어링 
+https://github.com/Team-Neighborhood/I-want-to-study-Data-Science/wiki/데이터-엔지니어
+
+14. ml 트렌드
+https://www.infoq.com/articles/ai-ml-data-engineering-trends-2021/
