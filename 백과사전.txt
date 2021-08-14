@@ -40,3 +40,12 @@ https://github.com/Team-Neighborhood/I-want-to-study-Data-Science/wiki/데이터
 
 14. ml 트렌드
 https://www.infoq.com/articles/ai-ml-data-engineering-trends-2021/
+
+15. Sentimental Analysis using LSTM
+https://www.analyticsvidhya.com/blog/2021/08/sentiment-analysis-using-bidirectional-stacked-lstm/
+
+16. NLP 파이썬 라이브러리
+https://analyticsindiamag.com/best-python-libraries-of-2021-for-natural-language-processing/
+
+17. 우버
+https://eng.uber.com/cost-efficient-big-data-platform/
