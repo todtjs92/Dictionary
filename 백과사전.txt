@@ -49,3 +49,6 @@ https://analyticsindiamag.com/best-python-libraries-of-2021-for-natural-language
 
 17. 우버
 https://eng.uber.com/cost-efficient-big-data-platform/
+
+18. 오늘의집 airflow 도입기
+https://www.bucketplace.co.kr/post/2021-04-13-버킷플레이스-airflow-도입기/
