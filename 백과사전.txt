@@ -69,3 +69,6 @@ https://github.com/wnzhang/rtb-papers
 https://arxiv.org/pdf/1606.07792.pdf
 https://arxiv.org/pdf/1708.05031.pdf
 https://arxiv.org/pdf/1707.07435.pdf
+
+23. embedding layer 설명
+https://ebbnflow.tistory.com/154
