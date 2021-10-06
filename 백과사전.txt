@@ -72,3 +72,9 @@ https://arxiv.org/pdf/1707.07435.pdf
 
 23. embedding layer 설명
 https://ebbnflow.tistory.com/154
+
+24. LightGcn
+https://bladejun.tistory.com/104
+
+25. recbole 교보문고
+https://recbole.io
