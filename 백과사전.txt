@@ -79,3 +79,31 @@ https://bladejun.tistory.com/104
 25. recbole 교보문고
 https://recbole.io
 
+26.원서 어둠의경로
+libgen.is
+
+27. graph
+https://www.slideshare.net/koorukuroo/ss-64376277
+
+28. localhost 란
+https://codinglevelup.tistory.com/119
+
+29. .profile의 정체
+https://dog-developers.tistory.com/61
+https://blog.daum.net/ktlee2389/104
+시작할때 환경변수들을 모두 등록시켜주는 역할을 하는 듯. 사용자가 로그인했을때 실행되는 쉘스크립트 
+
+30. java_home의 정체
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=mimi215&logNo=60201307131
+
+31. 케글 bert
+https://www.kaggle.com/bibek777/bert-baseline
+
+32. 추천 
+https://tv.naver.com/v/16970750
+
+33. graph embedding
+https://jxnjxn.tistory.com/77
+
+34. nn.embedding
+https://stackoverflow.com/questions/50747947/embedding-in-pytorch
