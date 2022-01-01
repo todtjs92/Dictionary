@@ -107,3 +107,43 @@ https://jxnjxn.tistory.com/77
 
 34. nn.embedding
 https://stackoverflow.com/questions/50747947/embedding-in-pytorch
+
+35. module_list
+https://hongl.tistory.com/279
+
+36. init.py에 관한 설명들
+https://velog.io/@limes/Python-init.py-%ED%8C%8C%EC%9D%BC%EC%9D%98-%EC%97%AD%ED%95%A0
+
+https://nesoy.github.io/articles/2018-07/Python-init-all
+
+37. 직렬 스케줄
+https://nathanh.tistory.com/117
+
+38. kafka 논문
+https://epicdevs.com/17
+https://victorydntmd.tistory.com/344
+https://velog.io/@hyeondev/Apache-Kafka-의-기본-아키텍쳐
+
+
+39. Self-organizing-map
+https://ratsgo.github.io/machine%20learning/2017/05/01/SOM/
+
+40. 프로세스와 쓰레드
+https://velog.io/@raejoonee/프로세스와-스레드의-차이
+
+41. 추천 관련
+
+카카오 브랜치: 
+https://brunch.co.kr/@kakao-it/72
+Doc2vec:
+https://hanshuginn.blogspot.com/2019/03/python-doc2vec.html
+
+ab테스트:
+https://assaeunji.github.io/review/2021-12-16-offline_abtest/#comments
+
+
+42. 클원강의
+https://class101.net/products/HE8dqLw0Vhnwt4nRFQaH
+https://class101.net/products/oU5yNXIHjzpmyJsyeIMI
+https://class101.net/products/nLTf6U6abiqJp7eFZclT
+https://class101.net/products/mSznoZ5bx0AIqyerHTGx
