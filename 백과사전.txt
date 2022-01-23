@@ -153,6 +153,8 @@ https://1ambda.blog/2022/01/02/practical-spark-12/comment-page-1/?unapproved=428
 
 https://tech.kakao.com/2021/10/08/spark-shuffle-partition/
 
+https://12bme.tistory.com/437
+
 44. conda error
 export PATH="/opt/anaconda3/bin:$PATH"
 source activate
@@ -177,4 +179,5 @@ https://g-idler.tistory.com/m/2
 
 49. Line 데이터 설계
 https://engineering.linecorp.com/ko/blog/line-game-data-analysis/
+
 
