@@ -181,3 +181,33 @@ https://g-idler.tistory.com/m/2
 https://engineering.linecorp.com/ko/blog/line-game-data-analysis/
 
 
+즐겨찾기에 있던것들
+Ab 테스트
+https://ko.surveymonkey.com/mp/ab-testing-significance-calculator/
+
+패캠 추천 깃헙
+https://github.com/jaewonlee-728
+
+쿠버네티스 놀이터:
+https://www.katacoda.com/courses/kubernetes/playground
+https://labs.play-with-k8s.com
+
+민구조
+https://medium.com/@mgjmingujo/aws-emr과-airflow를-이용한-batch-data-processing-a100fc2f4f10
+
+깃강제풀:
+https://mosei.tistory.com/entry/GIT-git-pull-시-merge-오류가-날때-강제-git-pull-덮어쓰기-방법
+
+데이터엔지니어링 블로그:
+https://towardsdatascience.com/tagged/data-engineering
+https://towardsdatascience.com
+
+깃액션:
+https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+https://jinmay.github.io/2020/05/13/git/github-action-syntax/
+
+부스트코스:
+https://www.boostcourse.org/opencourse
+
+
+
